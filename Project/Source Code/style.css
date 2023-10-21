@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --white: hsl( 0 100% 100% / .8);
+}
+body{
+    --bg-color: hsl(0 0% 0% / 2);
+    width: 100%;
+    background: var(--bg-color);
+    font-family: 'Gabarito', sans-serif;
+}
+.head{
+    font-size: 40px;
+    text-align: center;
+    background: var(--bg-color);
+    color: var(--white);
+    width: 100%;
+    padding: .5em;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--bg-color);
+}
+header nav{
+    width: 40%;
+}
+header ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--white);
+}
+
+main{
+    scroll-margin-top: 80px;
+    height: calc(100vh - 80px);
+    background-image: linear-gradient(to bottom, #00000099, #00000066), url(https://images.pexels.com/photos/3028514/pexels-photo-3028514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-content: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%,55% 95%, 50% 100%,45% 95%, 0% 95%);
+    margin-bottom: -5%;
+}
+main h1{
+    text-align: center;
+    width: 30ch;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ffffff66;
+}
+main h1 span{
+    color: var(--white);
+}
+
+#about{
+    background-image: linear-gradient(to bottom, #00000099, #00000066), url(https://cdn.britannica.com/85/13085-004-4664A6B5/Corpus-Christi-College-University-of-Cambridge-England.jpg?s=1500x700&q=85);
+    background-size: cover;
+    background-position: center;
+    padding: 10em;
+    background-repeat: no-repeat;
+    min-height: fit-content;
+    color: var(--white);
+    display: grid;
+    place-content: center;
+}
+#about p{
+    width: 60ch;
+}
+.about-buttons{
+    margin-top: 20px;
+    text-align: center;
+}
+.about-buttons a{
+    font-weight: 600;
+    border: 2px solid white;
+    padding: .5em 1em;
+    text-decoration: none;
+    color: inherit;
+    transition: all .5s ease;
+    &:hover{
+        color: var(--bg-color);
+        background: var(--white);
+    }
+}
+
+
+#dashboard,
+#story{
+    scroll-margin-top: 80px;
+    width: 100%;
+}
+.frame{
+    width: 70%;
+    margin: auto;
+}
+.frame iframe{
+    width: 100%;
+    height: 90vh;
+    z-index: 1;
+}
+
+
+#team{
+    scroll-margin-top: 80px;
+    width: 100%;
+    padding: 30px 0;
+}
+.team-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.team-container .member{
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    background-color: #00000066;
+    overflow: hidden;
+    position: relative;
+}
+.team-container .member img{
+    width: 100%;
+    transition: scale .3s linear;
+    opacity: .7;
+}
+.team-container .member .member-details{
+    color: var(--white);
+    background: linear-gradient(to bottom, transparent, #000000);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    line-height: 2em;
+    padding: 1em;
+    transform: translateY(70px);
+    transition: transform .3s linear;
+}
+.team-container .member:hover img{
+    scale: 1.1;
+}
+.team-container .member:hover .member-details{
+    transform: translateY(0);
+}
+
+
+footer {
+    padding: 20px;
+    background: #1a1a1a;
+    color: var(--white);
+  }
+  .foot {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .foot .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  footer img {
+    width: 100px;
+    margin-bottom: 30px;
+    mix-blend-mode: multiply;
+  }
+  footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+  }
+  footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 10px;
+  }
+  footer .follow {
+    margin-top: 20px;
+  }
+  footer .follow i {
+    color: var(--white);
+    padding-right: 4px;
+    cursor: pointer;
+  }
+  footer .install .row img {
+    border: 1px solid var(--bg-color);
+    border-radius: 6px;
+  }
+  footer .install img {
+    margin: 10px 0 15px 0;
+  }
+  footer .follow i:hover,
+  footer a:hover {
+    color: var(--white);
+  }
+  footer .copy {
+    width: 100%;
+    text-align: center;
+    & p{
+        font-size: 1rem;
+        font-weight: 500;
+        }
+  }
+  
+main,
+#about,
+#dashboard,
+#story{
+    /* display: none; */
+}
